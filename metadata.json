@@ -1,0 +1,7 @@
+{
+  "name": "GOGOs Karachi | Craft Smash Burgers & Specialty Coffee",
+  "description": "Minimalist sketch-inspired landing page for GOGOs Karachi featuring craft smash burgers, loaded fries, and specialty coffee.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

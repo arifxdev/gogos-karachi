@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --canvas-beige: #EBE7DF;
+    --sketch-ink: #141414;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #EBE7DF;
+    color: #141414;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #EBE7DF;
+    /* Custom SVG pencil arrow cursor fallback with tip hotspot at 2, 2 */
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'><defs><clipPath id='c'><path d='M 2,2 L 2,23 L 7,18 L 12,28 L 17,25 L 12,15 L 20,15 Z'/></clipPath></defs><g clip-path='url(%23c)'><rect x='0' y='0' width='32' height='32' fill='%23E5A65E'/><path d='M 5,5 L 5,23 L 10,18 L 14,27 L 16,26 L 11,16 L 15,16 Z' fill='%23D98A32' opacity='0.6'/><path d='M 2,2 L 2,12 Q 7,10 12,13 L 12,2 Z' fill='%23F5E6D3'/><path d='M 2,2 L 2,6 L 6,2 Z' fill='%23141414'/><path d='M 9,21 L 11,26 L 15,24 L 12,19 Z' fill='%23D4D4D8'/><path d='M 11,25 L 12,28 L 17,25 L 15,22 Z' fill='%23141414'/></g><path d='M 2,2 L 2,23 L 7,18 L 12,28 L 17,25 L 12,15 L 20,15 Z' fill='none' stroke='%23141414' stroke-width='1.6' stroke-linejoin='round' stroke-linecap='round'/></svg>") 2 2, auto;
+  }
+
+  button, a, input, select, textarea, [role="button"] {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'><defs><clipPath id='c'><path d='M 2,2 L 2,23 L 7,18 L 12,28 L 17,25 L 12,15 L 20,15 Z'/></clipPath></defs><g clip-path='url(%23c)'><rect x='0' y='0' width='32' height='32' fill='%23E5A65E'/><path d='M 5,5 L 5,23 L 10,18 L 14,27 L 16,26 L 11,16 L 15,16 Z' fill='%23D98A32' opacity='0.6'/><path d='M 2,2 L 2,12 Q 7,10 12,13 L 12,2 Z' fill='%23F5E6D3'/><path d='M 2,2 L 2,6 L 6,2 Z' fill='%23141414'/><path d='M 9,21 L 11,26 L 15,24 L 12,19 Z' fill='%23D4D4D8'/><path d='M 11,25 L 12,28 L 17,25 L 15,22 Z' fill='%23141414'/></g><path d='M 2,2 L 2,23 L 7,18 L 12,28 L 17,25 L 12,15 L 20,15 Z' fill='none' stroke='%23141414' stroke-width='1.6' stroke-linejoin='round' stroke-linecap='round'/></svg>") 2 2, pointer;
+
+  }
+}
+
+/* Outlined typography matching the reference image's hollow text */
+.text-hollow {
+  color: transparent !important;
+  -webkit-text-stroke: 2px #141414;
+}
+
+@media (max-width: 640px) {
+  .text-hollow {
+    -webkit-text-stroke: 1.5px #141414;
+  }
+}
+
+/* Subtle hand-drawn paper grain overlay */
+.sketch-grain {
+  background-image: radial-gradient(rgba(20, 20, 20, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
